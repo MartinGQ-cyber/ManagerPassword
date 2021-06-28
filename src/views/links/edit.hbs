@@ -1,0 +1,32 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Editar Cuenta</h3>
+        </div>
+        <div class="card-body">
+          <form action="/links/edit/{{link.id}}" method="POST">
+            <div class="form-group">
+               <input type="text" name="title" class="form-control" maxlength="15" placeholder="Titulo" autofocus required oninvalid="setCustomValidity('El titulo es obligatorio')" oninput="setCustomValidity('')">
+            </div>
+            <div class="form-group">
+                 <input type="url" name="url" class="form-control" maxlength="50" placeholder="URL" required oninvalid="setCustomValidity('Escriba un formato correcto de url')" oninput="setCustomValidity('')">
+            </div>
+            <div class="form-group">
+               <input type="email" name="email" class="form-control" maxlength="50" placeholder="Email"  required oninvalid="setCustomValidity('Introduzca un email válido')" oninput="setCustomValidity('')">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" maxlength="16" placeholder="Contraseña" required oninvalid="setCustomValidity('Introduzca la contraseña correspondiente a su cuenta')" oninput="setCustomValidity('')">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
